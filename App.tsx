@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
-import { Home } from './src/Home';
+import { Home } from './src/pages/Home';
 
 function App() {
   return (
