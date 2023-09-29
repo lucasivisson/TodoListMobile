@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginRight: 10,
   },
-  focus: {
+  inputFocus: {
     borderColor: colors['purple'],
     borderWidth: 1,
   },
