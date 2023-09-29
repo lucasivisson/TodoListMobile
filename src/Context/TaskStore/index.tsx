@@ -36,4 +36,9 @@ export const useTask = create<Task>(set => ({
       completed: state.completed + isCompleted,
     }));
   },
+  removeTask: (id: number) => {
+    set(state => ({
+      tasks: state.tasks.filter(task => task.id !== id),
+    }));
+  },
 }));
