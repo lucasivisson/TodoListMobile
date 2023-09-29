@@ -5,11 +5,17 @@ export function TaskList() {
   return (
     <View>
       <View style={styles.headerTaskList}>
-        <View>
-          <Text style={styles.titleCreated}>Criadas</Text>
+        <View style={styles.titleTaskListContainer}>
+          <Text style={[styles.titleTaskList, styles.createdText]}>
+            Criadas
+          </Text>
+          <Text style={styles.numberTasks}>0</Text>
         </View>
-        <View>
-          <Text>Concluídas</Text>
+        <View style={styles.titleTaskListContainer}>
+          <Text style={[styles.titleTaskList, styles.completedText]}>
+            Concluídas
+          </Text>
+          <Text style={styles.numberTasks}>0</Text>
         </View>
       </View>
     </View>
