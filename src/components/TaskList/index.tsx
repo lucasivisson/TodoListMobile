@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { styles } from './styles';
 
 export function TaskList() {
@@ -16,6 +16,13 @@ export function TaskList() {
             Concluídas
           </Text>
           <Text style={styles.numberTasks}>0</Text>
+        </View>
+      </View>
+      <View>
+        <View>
+          <Image source={require('../../../assets/Clipboard.png')}></Image>
+          <Text>Você ainda não tem tarefas cadastradas</Text>
+          <Text>Crie tarefas e organize seus itens a fazer</Text>
         </View>
       </View>
     </View>

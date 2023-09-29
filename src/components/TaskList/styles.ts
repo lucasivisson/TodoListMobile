@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: colors['gray-400'],
     color: colors['gray-200'],
+    fontWeight: 'bold',
     paddingTop: 2,
     paddingBottom: 2,
     paddingLeft: 12,
