@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   headerTaskList: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 5,
+    marginBottom: 20,
   },
   titleTaskListContainer: {
     flexDirection: 'row',

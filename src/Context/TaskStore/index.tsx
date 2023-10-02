@@ -15,7 +15,7 @@ type TaskType = {
 export const useTask = create<Task>(set => ({
   created: 0,
   completed: 0,
-  tasks: [],
+  tasks: [{ id: 1, text: 'Lucas Ivisson de Farias Santos', completed: true }],
   addTask: (task: TaskType) =>
     set(state => ({
       tasks: [...state.tasks, task],
