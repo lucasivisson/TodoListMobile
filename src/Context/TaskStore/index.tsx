@@ -4,9 +4,12 @@ type Task = {
   created: number;
   completed: number;
   tasks: Array<TaskType>;
+  addTask: (task: TaskType) => void;
+  checkTask: (id: number) => void;
+  removeTask: (id: number) => void;
 };
 
-type TaskType = {
+export type TaskType = {
   id: number;
   text: string;
   completed: boolean;
@@ -15,7 +18,7 @@ type TaskType = {
 export const useTask = create<Task>(set => ({
   created: 0,
   completed: 0,
-  tasks: [{ id: 1, text: 'Lucas Ivisson de Farias Santos', completed: true }],
+  tasks: [],
   addTask: (task: TaskType) =>
     set(state => ({
       tasks: [...state.tasks, task],
@@ -29,6 +32,8 @@ export const useTask = create<Task>(set => ({
           task.completed = !task.completed;
           if (task.completed) {
             isCompleted = 1;
+          } else {
+            isCompleted = -1;
           }
         }
         return task;
@@ -38,7 +43,11 @@ export const useTask = create<Task>(set => ({
   },
   removeTask: (id: number) => {
     set(state => ({
+      completed: state.tasks.find(task => task.id === id)?.completed
+        ? state.completed - 1
+        : state.completed,
       tasks: state.tasks.filter(task => task.id !== id),
+      created: state.created - 1,
     }));
   },
 }));

@@ -26,7 +26,7 @@ export function TaskList() {
       <SafeAreaView>
         <FlatList
           data={tasks}
-          renderItem={({ item }) => <Task text={item.text}></Task>}
+          renderItem={({ item }) => <Task id={item.id} text={item.text}></Task>}
           keyExtractor={item => String(item.id)}
           ListEmptyComponent={<EmptyTaskList />}
         />
