@@ -17,8 +17,10 @@ export function Input() {
       text: inputValue,
       completed: false,
     };
-    addTask(task);
-    setInputValue('');
+    if (inputValue !== '') {
+      addTask(task);
+      setInputValue('');
+    }
   }
 
   return (

@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     height: '100%',
   },
   footerContainer: {
+    flex: 1,
     marginTop: -50,
   },
 });

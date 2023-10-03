@@ -8,7 +8,7 @@ export function TaskList() {
   const { tasks, completed, created } = useTask(state => state);
 
   return (
-    <View>
+    <View style={{ height: '35%' }}>
       <View style={styles.headerTaskList}>
         <View style={styles.titleTaskListContainer}>
           <Text style={[styles.titleTaskList, styles.createdText]}>
@@ -23,7 +23,7 @@ export function TaskList() {
           <Text style={styles.numberTasks}>{completed}</Text>
         </View>
       </View>
-      <SafeAreaView>
+      <SafeAreaView style={{ height: '100%', width: '100%' }}>
         <FlatList
           data={tasks}
           renderItem={({ item }) => <Task id={item.id} text={item.text}></Task>}
